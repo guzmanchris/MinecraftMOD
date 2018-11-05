@@ -1,9 +1,10 @@
 package tameAHorseMod.proxy;
 
+import net.minecraft.item.Item;
+
 public class CommonProxy {
 
-	public CommonProxy() {
-		// TODO Auto-generated constructor stub
-	}
+		
+		public void registerItemRenderer(Item item, int meta, String id) {}
 
 }
