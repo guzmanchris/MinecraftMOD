@@ -25,7 +25,6 @@ import java.util.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.renderer.block.model.IBakedModel;
-import net.minecraft.client.renderer.block.model.ModelBlock;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.VertexFormat;
 import net.minecraft.util.ResourceLocation;
@@ -121,9 +120,5 @@ public interface IModel
      */
     default IModel retexture(ImmutableMap<String, String> textures) {
         return this;
-    }
-
-    default Optional<ModelBlock> asVanillaModel() {
-        return Optional.empty();
     }
 }
