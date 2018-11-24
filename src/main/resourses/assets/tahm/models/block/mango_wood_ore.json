@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+       "all": "tahm:blocks/mango_wood_ore"
+   }
+}

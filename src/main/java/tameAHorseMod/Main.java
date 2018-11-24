@@ -7,8 +7,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import tameAHorseMod.proxy.CommonProxy;
 import tameAHorseMod.util.Reference;
+import tameAHorseMod.world.ModWorldGenerator;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
@@ -21,7 +23,7 @@ public class Main {
 	
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
-		
+		GameRegistry.registerWorldGenerator(new ModWorldGenerator(), 3);
 	}
 	
 	@EventHandler
