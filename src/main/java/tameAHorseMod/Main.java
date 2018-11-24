@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import tameAHorseMod.init.ModRecipies;
 import tameAHorseMod.proxy.CommonProxy;
 import tameAHorseMod.util.Reference;
 import tameAHorseMod.world.ModWorldGenerator;
@@ -28,7 +29,7 @@ public class Main {
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
-		
+		ModRecipies.init();
 	}
 
 	@EventHandler
