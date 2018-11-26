@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "QQQ",
+        "RRR",
+        "QQQ"
+    ],
+    "key":
+    {
+        "R":
+        {
+            "item": "tahm:whistle"   
+        },
+        
+        "Q":
+        {
+            "item": "minecraft:lapis_lazuli"   
+        }
+        
+    },
+    
+    "result":
+    {
+        "item": "tahm:ocarina",
+        "count": 1
+    }
+}

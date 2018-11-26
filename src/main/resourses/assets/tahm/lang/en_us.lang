@@ -8,3 +8,17 @@ item.ocarina.name=Ocarina
 tile.t_block.name=Block of Instagram
 tile.mango_wood_ore.name=Mango Wood Ore
 tile.twitter.name=Block of Twitter
+
+
+//Tools
+item.mango_sword.name=Mango Sword
+item.mango_shovel.name=Mango Shovel
+item.mango_pickaxe.name=Mango PickAxe
+item.mango_axe.name=Mango Axe
+item.mango_hoe.name=Mango Hoe
+
+//Armor
+item.mango_helmet.name=Mango Helmet
+item.mango_chestplate.name=Mango Chestplate
+item.mango_leggins.name=Mango Leggins
+item.mango_boots.name=Mango Boots
