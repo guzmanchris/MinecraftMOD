@@ -28,6 +28,7 @@ public class PowerGeneratorTileEntity extends TileEntity implements ITickable{
 
 	public ItemStackHandler handler = new ItemStackHandler(1);
 	private ModEnergyStorage storage = new ModEnergyStorage(20000);
+	public static final int MAX_POWER = 20000;
 	
 	public int power = storage.getEnergyStored();
 	public int burnTime;
