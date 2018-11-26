@@ -42,9 +42,9 @@ public class PowerGeneratorGUI extends GuiContainer{
 	}
 
 	private int getEnergyStorageScaled(int pixels) {
-		int power = this.tileEntity.getEnergyStored();
-		int maxPower = this.tileEntity.getMaxEnergyStored();
-		return power !=0 && maxPower != 0 ? power*pixels/maxPower : 0;
+		int power = this.tileEntity.getField(0);
+		int maxPower = PowerGeneratorTileEntity.MAX_POWER;
+		return power*pixels/maxPower;
 	}
 	
 	private int getBurnTimeScaled(int pixels) {
