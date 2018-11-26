@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "tahm:whistle"
+        }
+    },
+    
+    "result":
+    {
+        "item": "tahm:twitter",
+        "count": 1
+    }
+}

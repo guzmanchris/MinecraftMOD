@@ -10,6 +10,7 @@ public class ModBlocks {
 	public static final ArrayList<Block> BLOCKS = new ArrayList<Block>();
 	
 	public static Block T_BLOCK = new BlockBase("t_block",Material.IRON);
+	public static Block TWITTER_BLOCK = new BlockBase("twitter",Material.IRON);
 	
 	
 }
