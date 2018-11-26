@@ -8,5 +8,7 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "tameAHorseMod.proxy.ClientProxy";
 	public static final String COMMON_PROXY_CLASS = "tameAHorseMod.proxy.CommonProxy";
 	
+	public static final int GUI_POWER_GENERATOR = 1;
+	
 
 }

@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import tameAHorseMod.init.ModRecipies;
 import tameAHorseMod.proxy.CommonProxy;
 import tameAHorseMod.util.Reference;
+import tameAHorseMod.util.handlers.RegistryHandler;
 import tameAHorseMod.world.ModWorldGenerator;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
@@ -30,6 +31,7 @@ public class Main {
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
 		ModRecipies.init();
+		RegistryHandler.initRegistries();
 	}
 
 	@EventHandler
