@@ -80,15 +80,15 @@ public class PipeTileEntity extends TileEntity implements ITickable{
 			pipe =  (PipeTileEntity) world.getTileEntity(pos.north());
 			transferPipeToPipe(pipe);
 		}
-		if(world.getTileEntity(pos.south()) instanceof PipeTileEntity) {
+		else if(world.getTileEntity(pos.south()) instanceof PipeTileEntity) {
 			pipe =  (PipeTileEntity) world.getTileEntity(pos.south());
 			transferPipeToPipe(pipe);
 		}
-		if(world.getTileEntity(pos.east()) instanceof PipeTileEntity) {
+		else if(world.getTileEntity(pos.east()) instanceof PipeTileEntity) {
 			pipe =  (PipeTileEntity) world.getTileEntity(pos.east());
 			transferPipeToPipe(pipe);
 		}
-		if(world.getTileEntity(pos.west()) instanceof PipeTileEntity) {
+		else if(world.getTileEntity(pos.west()) instanceof PipeTileEntity) {
 			pipe =  (PipeTileEntity) world.getTileEntity(pos.west());
 			transferPipeToPipe(pipe);
 		}
@@ -108,9 +108,16 @@ public class PipeTileEntity extends TileEntity implements ITickable{
 	}
 	
 	public void transferPipeToPipe(PipeTileEntity pipe) {
-		if(power>0 && pipe.getPower()<MAX_POWER) {
-			pipe.setPower(pipe.getPower()+1);
-			power--;
+		if(isSending && power>0 && pipe.getPower()<MAX_POWER) {	
+				pipe.setPower(pipe.getPower()+1);
+				power--;
+				if(!pipe.isSending) pipe.setSending(true);
+		}
+		if(!isSending && power<MAX_POWER && pipe.getPower()>0){
+			pipe.setPower(pipe.getPower()-1);
+			power++;
+			if(pipe.isSending) pipe.setSending(false);
+			
 		}
 	}
 
