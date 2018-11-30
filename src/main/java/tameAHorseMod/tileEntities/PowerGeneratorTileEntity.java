@@ -34,6 +34,7 @@ public class PowerGeneratorTileEntity extends TileEntity implements ITickable{
 	public int burnTime;
 	public int currentBurnTime = 0;
 	private String customName;
+	public boolean isSending=true;
 	
 	@Override
 	public void update() {
@@ -45,7 +46,6 @@ public class PowerGeneratorTileEntity extends TileEntity implements ITickable{
 				currentBurnTime=0;
 			}
 		}
-		
 	}
 	
 	private boolean isItemFuel(ItemStack fuel) {
@@ -103,6 +103,7 @@ public class PowerGeneratorTileEntity extends TileEntity implements ITickable{
 		compound.setInteger("Current Burn Time", this.currentBurnTime);
 		compound.setInteger("Power", this.power);
 		compound.setString("Name", getDisplayName().toString());
+		compound.setBoolean("Sending", this.isSending);
 		this.storage.writeToNBT(compound);
 		return compound;
 	}
@@ -115,6 +116,7 @@ public class PowerGeneratorTileEntity extends TileEntity implements ITickable{
 		this.burnTime = compound.getInteger("Burn Time");
 		this.currentBurnTime = compound.getInteger("Current Burn Time");
 		this.customName = compound.getString("Name");
+		this.isSending = compound.getBoolean("Sending");
 		this.storage.readFromNBT(compound);
 	}
 	
@@ -127,8 +129,12 @@ public class PowerGeneratorTileEntity extends TileEntity implements ITickable{
 		return this.power;
 	}
 	
-	public int getMaxEnergyStored() {
-		return this.storage.getMaxEnergyStored();
+	public void setIsSending(boolean isSending) {
+		this.isSending = isSending;
+	}
+	
+	public boolean getIsSending() {
+		return isSending;
 	}
 	
 	public int getField(int id) {
@@ -151,6 +157,7 @@ public class PowerGeneratorTileEntity extends TileEntity implements ITickable{
 	public boolean isUsableByPlayer(EntityPlayer player) {
 		return this.world.getTileEntity(this.pos) != this ? false: player.getDistanceSq((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 64.0D;
 	}
+
 	
 
 }
