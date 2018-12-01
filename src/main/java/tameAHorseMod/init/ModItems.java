@@ -30,7 +30,7 @@ public class ModItems {
 	
 	//Material 
 	public static final ToolMaterial MATERIAL_MANGO=EnumHelper.addToolMaterial("material_mango", 3, 60, 8.0F, 3.0F,20);
-	public static final ArmorMaterial ARMOR_MATERIAL_MANGO = EnumHelper.addArmorMaterial("armor_material_mango", Reference.MOD_ID+ ":diamond", 16, new int[] {2,5,7,3}, 10,
+	public static final ArmorMaterial ARMOR_MATERIAL_MANGO = EnumHelper.addArmorMaterial("armor_material_mango", Reference.MOD_ID+ ":mango", 16, new int[] {2,5,7,3}, 10,
 			SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F);
 			
 			//Items
