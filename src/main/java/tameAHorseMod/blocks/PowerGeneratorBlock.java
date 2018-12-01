@@ -43,7 +43,7 @@ public class PowerGeneratorBlock extends BlockBase {
 		return true;
 	}
 	
-	//Temporary, for testing purposes
+	
 	@Override
 	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
 		PowerGeneratorTileEntity powerGen = (PowerGeneratorTileEntity) worldIn.getTileEntity(pos);;
