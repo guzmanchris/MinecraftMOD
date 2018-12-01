@@ -111,12 +111,12 @@ public class PipeTileEntity extends TileEntity implements ITickable{
 		if(isSending && power>0 && pipe.getPower()<MAX_POWER) {	
 				pipe.setPower(pipe.getPower()+1);
 				power--;
-				if(!pipe.isSending) pipe.setSending(true);
+				if(!pipe.isSending()) pipe.setSending(true);
 		}
 		if(!isSending && power<MAX_POWER && pipe.getPower()>0){
 			pipe.setPower(pipe.getPower()-1);
 			power++;
-			if(pipe.isSending) pipe.setSending(false);
+			if(pipe.isSending()) pipe.setSending(false);
 			
 		}
 	}
