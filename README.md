@@ -23,4 +23,5 @@ power by pressing 'shift' and right clicking the block (Note: you must not be ho
 use your bare hand). If you place pipes in between a generator set to send and another set to receive, the power is transfered
 from one to the other. You can also check how much power is in the pipes by right clicking them.
 
+
  
